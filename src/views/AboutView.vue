@@ -6,7 +6,7 @@
         <h3 class="section">{{ section.name }}</h3>
         <ul class="subtopics-list">
           <li v-for="topic in section.topics" :key="topic.name">
-            <RouterLink :to="topic.route">
+            <RouterLink :to="topic.route" class="topic-link">
               <strong class="topic">{{ topic.name }}</strong>
               <br />
               <span class="desc">{{ topic.description }}</span>
@@ -132,61 +132,92 @@ export default {
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  background-color: #e0f7fa;
-  /* Light blue background */
-  color: black;
-  /* Text color black */
-}
-
-.title {
-  font-weight: 600;
-}
-
-.section {
-  font-weight: 600;
-  color: rgb(89, 65, 100)
-}
-
-.topic {
-  font-weight: 500;
-}
-
-.topics-list,
-.subtopics-list {
-  padding: 0;
-  margin: 0;
-}
-
-.topics-list>li {
-  margin: 10px 0;
-}
-
-.subtopics-list>li {
-  margin: 5px 0;
-}
-
-.desc {
-  color: black;
-  /* Ensure links are also black */
-}
-
-.desc:hover {
-  text-decoration: underline;
-}
-
-/* scrollbar */
-
-.about-container::-webkit-scrollbar {
-  width: 8px;
-}
-
-.about-container::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 10px;
-}
-
-.about-container::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 10px;
-}
+  background-color: #e3f2fd;
+    /* Light blue background */
+    color: #0d47a1;
+    /* Dark blue text */
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .title {
+    font-weight: 700;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #01579b;
+    /* Slightly lighter blue */
+  }
+  
+  .section {
+    font-weight: 600;
+    color: #0288d1;
+    font-size: 1.5em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .topic-link {
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    /* White background for each topic */
+    color: #0d47a1;
+    text-decoration: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .topic-link:hover {
+    background-color: #bbdefb;
+    /* Lighter blue on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Slight shadow effect */
+  }
+  
+  .topic {
+    font-weight: 500;
+    font-size: 1.2em;
+  }
+  
+  .desc {
+    color: #546e7a;
+    /* Darker grey */
+    font-size: 1em;
+  }
+  
+  .topics-list,
+  .subtopics-list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+  
+  .topics-list>li {
+    margin: 10px 0;
+  }
+  
+  .subtopics-list>li {
+    margin: 5px 0;
+  }
+  
+  /* Custom scrollbar */
+  .about-container::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .about-container::-webkit-scrollbar-track {
+    background: #e1f5fe;
+    /* Lighter blue track */
+    border-radius: 10px;
+  }
+  
+  .about-container::-webkit-scrollbar-thumb {
+    background: #0288d1;
+    /* Blue thumb */
+    border-radius: 10px;
+  }
+  
+  .about-container::-webkit-scrollbar-thumb:hover {
+    background: #0277bd;
+    /* Darker blue on hover */
+  }
 </style>

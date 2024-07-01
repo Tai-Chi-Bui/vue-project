@@ -160,5 +160,6 @@ input {
 
 p {
     margin-top: 5px;
+    color: white
 }
 </style>

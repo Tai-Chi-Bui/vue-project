@@ -21,7 +21,22 @@ const router = createRouter({
       path: '/directives',
       name: 'Directives',
       component: () => import('../views/fundamental/Directives.vue')
-    }
+    },
+    {
+      path: '/api-styles',
+      name: 'API Styles',
+      component: () => import('../views/fundamental/ApiStyles.vue')
+    },
+    {
+      path: '/options-api',
+      name: 'Options API',
+      component: () => import('../views/fundamental/OptionsApi.vue')
+    },
+    {
+      path: '/composition-api',
+      name: 'Composition API',
+      component: () => import('../views/fundamental/CompositionApi.vue')
+    },
   ]
 })
 
